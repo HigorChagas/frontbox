@@ -178,6 +178,7 @@ img {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	align-items: flex-end;
 }
 
 .plano {
@@ -242,16 +243,88 @@ img {
 	display: block;
 	max-width: 180px;
 	font-size: 2rem;
-	margin: 15px;
+	margin: 15px auto;
 	padding: 10px;
 	text-align: center;
 	text-transform: uppercase;
 	border: 2px solid var(--clr-green-light);
 }
 
+.plano__btn-comprar:hover {
+	background-color: var(--clr-pink-dark);
+	transition: 500ms ease-in-out;
+	color: #fff;
+}
+
+.plano:last-child {
+	background-color: var(--clr-green-light);
+}
+
+.plano:last-child, .plano:last-child .plano__btn-comprar {
+	border: 2px solid var(--clr-pink-dark);
+}
+
+.plano:last-child .plano-lista__item::before, .plano:last-child .plano__divisor {
+	background: var(--clr-pink-dark);
+}
+
+@media (max-width: 800px) {
+	.plano:nth-child(3) {
+		order: -2;
+	}
+
+	.plano:nth-child(2) {
+		order: -1;
+	}
+}
 /**********************************/
 /* 7. Vantagens
 /**********************************/
+
+.vantagens {
+	max-width: 960px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.vantagem {
+	max-width: 240px;
+	margin: 10px;
+}
+
+.vantagem__titulo {
+	font-size: 1.7rem;
+	margin-bottom: 5px;
+	margin-left: 10px;
+}
+
+.vantagem__titulo::before {
+	content: "";
+	display: inline-block;
+	width: 10px;
+	height: 25px;
+	margin-right: 5px;
+}
+
+.vantagem:nth-of-type(3n+1) .vantagem__titulo::before {
+	background: var(--clr-green-light);
+}
+
+.vantagem:nth-of-type(3n+2) .vantagem__titulo::before {
+	background: var(--clr-pink-dark);
+}
+
+.vantagem:nth-of-type(3n+3) .vantagem__titulo::before {
+	background: var(--clr-green-dark);
+}
+
+@media (max-width: 800px) {
+	.vantagem {
+		max-width: 220px;
+	}
+}
 
 /**********************************/
 /* 8. Newsletter
