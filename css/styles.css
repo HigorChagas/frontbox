@@ -401,10 +401,12 @@ img {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	align-items: center;
 	padding: 55px calc((100% - 960px) / 2);
 }
 
 .footer__copyright, .footer__logo {
 	padding-left: 10px;
 	padding-right: 10px;
+	text-align: center;
 }
